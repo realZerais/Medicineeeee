@@ -159,9 +159,9 @@ const Fonts = [
 
 randFont = Fonts[Math.floor(Math.random() * 70)];
 c.beginPath();
-c.font = "15px " + randFont;
+c.font = "3vw " + randFont;
 c.fillStyle = "#FFFFFF";
-c.fillText("(Tap the screen and turn the volume up...enjoy)", 100, 100);
+c.fillText("(Tap the screen and turn the volume up...enjoy)", 10, 100);
 
 
 
@@ -173,7 +173,7 @@ function startInterval() {
 function printText(){
     randFont = Fonts[Math.floor(Math.random() * 70)];
     c.beginPath();
-    c.font = "15px " + randFont;
+    c.font = "2vw " + randFont;
     c.fillStyle = "#FFFFFF";
     c.fillText("Let Me Goooooooo!!!!!", Math.floor(Math.random() * canvas.width), Math.floor(Math.random() * canvas.height));
 
@@ -194,7 +194,7 @@ function printFont(){
     if(audio.currentTime > 212){
 
         c.beginPath();
-        c.font = "2vw dasjk";
+        c.font = "2.5vw dasjk";
         c.fillStyle = "#FFFFFF";
         c.fillText(conversation[index], 10, conversationHeight);
         conversationHeight+=7;
@@ -204,14 +204,17 @@ function printFont(){
     if(audio.currentTime > 250){
         printText();
     }
-    if(audio.currentTime > 255){
+    if(audio.currentTime > 257){
+        textSpeed =441;
+    }
+    if(audio.currentTime > 263){
         textSpeed =220;
     }
-    if(audio.currentTime > 260){
-        textSpeed =110;
-    }
     if(audio.currentTime > 265){
-        textSpeed =0;
+        textSpeed =50;
+    }
+    if(audio.currentTime > 268){
+        textSpeed =-111;
     }
     if(audio.currentTime >= 270){
         textSpeed =110;
