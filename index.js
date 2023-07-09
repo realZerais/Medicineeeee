@@ -1,7 +1,7 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
-canvas.width = window.innerWidth-7.9;
-canvas.height = window.innerHeight-7.9;  
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;  
 
 var textSpeed=882;
 var myInterval;
@@ -157,6 +157,15 @@ const Fonts = [
     "Phantom Fingers",
 ];
 
+randFont = Fonts[Math.floor(Math.random() * 70)];
+c.beginPath();
+c.font = "15px " + randFont;
+c.fillStyle = "#FFFFFF";
+c.fillText("(Tap the screen and turn the volume up...enjoy)", 100, 100);
+
+
+
+
 function startInterval() {
     myInterval = setTimeout(printFont, textSpeed);
 }
@@ -177,13 +186,17 @@ function printFont(){
     console.log(textSpeed);
     console.log(audio.currentTime);
 
-    
+   
+    if(audio.currentTime > 207 && audio.currentTime <209){
+        c.beginPath();
+        c.clearRect(0, 0, canvas.width,canvas.height);
+    }
     if(audio.currentTime > 212){
 
         c.beginPath();
-        c.font = "20px dasjk";
+        c.font = "2vw dasjk";
         c.fillStyle = "#FFFFFF";
-        c.fillText(conversation[index], 100, conversationHeight);
+        c.fillText(conversation[index], 10, conversationHeight);
         conversationHeight+=7;
         index++;
     }
@@ -203,37 +216,37 @@ function printFont(){
     if(audio.currentTime >= 270){
         textSpeed =110;
         c.clearRect(0, 0, canvas.width,canvas.height)
-        c.font = "80px " + randFont;
+        c.font = "4vw " + randFont;
         c.fillStyle = "#FF0000";
-        c.fillText("I LOVE YOU MY MEDICINEEEEE!!!!", canvas.width/2 - 600, canvas.height/2);
+        c.fillText("I LOVE YOU MY MEDICINEEEEE!!!!", 100, canvas.height/2);
     }
 
     if(audio.currentTime >= 277){
         textSpeed =110;
         c.clearRect(0, 0, canvas.width,canvas.height)
-        c.font = "80px " + randFont;
+        c.font = "4vw " + randFont;
         c.fillStyle = "#FF0000";
-        c.fillText("MAHAL KITA MY MEDICINE!!!!", canvas.width/2 - 600, canvas.height/2);
+        c.fillText("MAHAL KITA MY MEDICINE!!!!", 100, canvas.height/2);
     }
     if(audio.currentTime >= 284){
         textSpeed =110;
         c.clearRect(0, 0, canvas.width,canvas.height)
-        c.font = "80px " + randFont;
+        c.font = "4vw " + randFont;
         c.fillStyle = "#FF0000";
-        c.fillText("I LOVE YOU MY MEDICINEEEEE!!!!", canvas.width/2 - 600, canvas.height/2);
+        c.fillText("I LOVE YOU MY MEDICINEEEEE!!!!", 100, canvas.height/2);
     }
     if(audio.currentTime >= 292){
         textSpeed =110;
         c.clearRect(0, 0, canvas.width,canvas.height)
-        c.font = "80px " + randFont;
+        c.font = "4vw " + randFont;
         c.fillStyle = "#FF0000";
-        c.fillText("MAHAL KITA MY MEDICINE!!!!", canvas.width/2 - 600, canvas.height/2);
+        c.fillText("MAHAL KITA MY MEDICINE!!!!", 100 , canvas.height/2);
     }
     if(audio.currentTime >= 298){
         c.clearRect(0, 0, canvas.width,canvas.height)
-        c.font = "80px " + randFont;
+        c.font = "1vw " + randFont;
         c.fillStyle = "#FF0000";
-        c.fillText("MADE BY: DAVE SIAREZ", canvas.width/2 - 600, canvas.height/2);
+        c.fillText("MADE BY: DAVE SIAREZ", 100, canvas.height/2);
     }
     if(audio.currentTime >= 304){
         c.clearRect(0, 0, canvas.width,canvas.height)
